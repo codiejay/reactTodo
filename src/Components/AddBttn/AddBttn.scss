@@ -1,0 +1,49 @@
+// colors
+$baseColor: #010A20;
+$secondaryColor: #262E41;
+$mainBlue: #5881EA;
+$mainOrange: #FE8368;
+
+#mainAddBttn { 
+  background-color: $mainBlue;
+  width: 100px;
+  height: 100px;
+  margin: 0.9em 0em 0 27%;
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  padding-top: 0.5%;
+  border-radius: 200px;
+  transform: scale(0.7);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 10;
+  display: block;
+
+    &::after { 
+      width: 100%;
+      height: 100%;
+      background-color: rgba(88, 129, 234, 0.342);
+      position: absolute;
+      content: '';
+      display: block;
+      border-radius: 200px;
+      z-index: -2;
+      top: 0;
+      transition: 0.4s;
+    }
+
+    &:hover::after { 
+      transform: scale(1.2);
+      transition: 0.8s;
+    }
+
+    &:active { 
+      box-shadow: 0px 0px 7px 4px rgb(0, 0, 0);;
+    }
+    &:active::after { 
+      transform: scale(2);
+      transition: .2s;
+    }
+}

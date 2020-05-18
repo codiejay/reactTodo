@@ -1,0 +1,26 @@
+  // colors
+  $baseColor: #010A20;
+  $secondaryColor: #262E41;
+  $mainBlue: #5881EA;
+  $mainOrange: #FE8368;
+  
+  // Fonts
+  $mainFont: 'Alegreya Sans SC', sans-serif;
+
+#taskinputContainer { 
+  width: 90vw;
+  margin: 7vh auto 0 auto;
+    input { 
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      background-color: transparent;
+      opacity: 1;
+      color: white;
+      font-family: $mainFont;
+      font-size: 1.72em;
+      border: none;
+      border-bottom: 1px solid white;
+      padding: 0.6em 0.6em 0em 0.3em;
+    }
+}

@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import '../src/Assets/Variables/Variables.css';
+
+// Component Imports starts here
+import Logo from './Components/Logo/Logo';
+import TaskInput from './Components/TaskInput/TaskInput';
+import Tags from './Components/Tags/Tags';
+import AddBttn from './Components/AddBttn/AddBttn';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
+      <TaskInput />
+      <Tags />
+      <AddBttn />
     </div>
   );
 }

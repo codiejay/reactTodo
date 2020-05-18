@@ -1,0 +1,55 @@
+#mainAddBttn {
+  background-color: #5881EA;
+  width: 100px;
+  height: 100px;
+  margin: 0.9em 0em 0 27%;
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  padding-top: 0.5%;
+  border-radius: 200px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  z-index: 10;
+  display: block;
+}
+
+#mainAddBttn::after {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(88, 129, 234, 0.342);
+  position: absolute;
+  content: '';
+  display: block;
+  border-radius: 200px;
+  z-index: -2;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#mainAddBttn:hover::after {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#mainAddBttn:active {
+  -webkit-box-shadow: 0px 0px 7px 4px black;
+          box-shadow: 0px 0px 7px 4px black;
+}
+
+#mainAddBttn:active::after {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+/*# sourceMappingURL=AddBttn.css.map */
