@@ -1,0 +1,140 @@
+  // colors
+  $baseColor: #010A20;
+  $secondaryColor: #262E41;
+  $mainBlue: #5881EA;
+  $mainOrange: #FE8368;
+  
+  // Fonts
+  $mainFont: 'Alegreya Sans SC', sans-serif;
+
+    
+  #indTaskContainer { 
+    display: grid;
+    font-family: $mainFont;
+    color: white;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    user-select: none;
+    margin: 2em;
+    animation: fadingIn 1s 1 alternate;
+      #taskTag { 
+        p { 
+          font-size: 1.4em;
+        }
+      }
+      .indTags { 
+        cursor: pointer;
+        user-select: none;
+        background-color: white;
+        color: black;
+        width: fit-content;
+        padding: 5px 10px 5px 28px;
+        border-radius: 4000px;
+        position: relative;
+      }
+      #urgent { 
+        &::before { 
+          width: 15px;
+          height: 15px;
+          background: url('../../Assets/Imgs/sparkingHeart.svg');
+          display: block;
+          content: '';
+          position: absolute;
+          top: 25%;
+          left: 10%;
+          border-radius: 2000px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-x: center;
+        }
+      }
+      #important { 
+        &::before { 
+          width: 15px;
+          height: 15px;
+          background: url('../../Assets/Imgs/purpleLove.svg');
+          display: block;
+          content: '';
+          position: absolute;
+          top: 25%;
+          left: 10%;
+          border-radius: 2000px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-x: center;
+        }
+      }
+      #regular { 
+        &::before { 
+          width: 15px;
+          height: 15px;
+          background: url('../../Assets/Imgs/blackHeart.svg');
+          display: block;
+          content: '';
+          position: absolute;
+          top: 25%;
+          left: 10%;
+          border-radius: 2000px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-x: center;
+        }
+      }
+      #actBttns { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+          & div:nth-child(1) { 
+            width: 30px;
+            height: 100%;
+            background-color: $mainBlue;
+            border-radius: 200px;
+            position: relative;
+            cursor: pointer;
+              &::before { 
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                width: 20px;
+                height: 20px;
+                background: url('../../Assets/Imgs/correctSign.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: '';
+                border-radius: 200px;
+              }
+          }
+          & div:nth-child(2) { 
+            width: 30px;
+            height: 30px;
+            background-color: $mainOrange;
+            border-radius: 200px;
+            position: relative;
+            cursor: pointer;
+              &::before { 
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                width: 20px;
+                height: 20px;
+                background: url('../../Assets/Imgs/dustBin.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: '';
+                border-radius: 200px;
+              }
+          }
+      }
+  }
+
+
+  @keyframes fadingIn { 
+    from { 
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }

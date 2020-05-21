@@ -1,0 +1,16 @@
+  // colors
+  $baseColor: #010A20;
+  $secondaryColor: #262E41;
+  $mainBlue: #5881EA;
+  $mainOrange: #FE8368;
+  
+  // Fonts
+  $mainFont: 'Alegreya Sans SC', sans-serif;
+
+#taskListContainer { 
+  background-color: $secondaryColor;
+  padding: 5vh;
+  margin: 0em auto 0 auto;
+  border-radius: 20px;
+  height: auto;
+}

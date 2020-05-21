@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './AddBttn.css';
 
-const AddBttn = () => { 
+const AddBttn = (props) => { 
 
   return ( 
-    <div id='mainAddBttn'>
+    <div id='mainAddBttn' onClick={props.clickAddBttn}>
       +
     </div>
   )

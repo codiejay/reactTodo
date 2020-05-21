@@ -1,0 +1,160 @@
+#indTaskContainer {
+  display: -ms-grid;
+  display: grid;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: white;
+  -ms-grid-columns: 2fr 1.5fr 1fr;
+      grid-template-columns: 2fr 1.5fr 1fr;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 2em;
+  -webkit-animation: fadingIn 1s 1 alternate;
+          animation: fadingIn 1s 1 alternate;
+}
+
+#indTaskContainer #taskTag p {
+  font-size: 1.4em;
+}
+
+#indTaskContainer .indTags {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: white;
+  color: black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px 5px 28px;
+  border-radius: 4000px;
+  position: relative;
+}
+
+#indTaskContainer #urgent::before {
+  width: 15px;
+  height: 15px;
+  background: url("../../Assets/Imgs/sparkingHeart.svg");
+  display: block;
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  border-radius: 2000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#indTaskContainer #important::before {
+  width: 15px;
+  height: 15px;
+  background: url("../../Assets/Imgs/purpleLove.svg");
+  display: block;
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  border-radius: 2000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#indTaskContainer #regular::before {
+  width: 15px;
+  height: 15px;
+  background: url("../../Assets/Imgs/blackHeart.svg");
+  display: block;
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  border-radius: 2000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#indTaskContainer #actBttns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#indTaskContainer #actBttns div:nth-child(1) {
+  width: 30px;
+  height: 100%;
+  background-color: #5881EA;
+  border-radius: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+#indTaskContainer #actBttns div:nth-child(1)::before {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/Imgs/correctSign.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+  border-radius: 200px;
+}
+
+#indTaskContainer #actBttns div:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  background-color: #FE8368;
+  border-radius: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+#indTaskContainer #actBttns div:nth-child(2)::before {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/Imgs/dustBin.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+  border-radius: 200px;
+}
+
+@-webkit-keyframes fadingIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadingIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=IndividualTasks.css.map */

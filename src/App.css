@@ -8,4 +8,100 @@
 body {
   background-color: #010A20;
 }
+
+body .App #tasksList {
+  width: 60%;
+  margin: 4em auto 0 auto;
+}
+
+body .App #tasksList h1 {
+  font-size: 2em;
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  margin-bottom: 0.82em;
+}
+
+body [data-disappear='Deldisappear'] {
+  position: relative;
+  -webkit-animation: delDisappearMain 1s 1 !important;
+          animation: delDisappearMain 1s 1 !important;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+body [data-disappear='Deldisappear']::before {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  width: 0%;
+  height: 140%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  content: '';
+  background-color: #FE8368;
+  z-index: 2;
+  -webkit-animation: delDisappear 2s 1;
+          animation: delDisappear 2s 1;
+  border-radius: 5px;
+}
+
+body [data-disappear='Donedisappear'] {
+  position: relative;
+  -webkit-animation: delDisappearMain 1s 1 !important;
+          animation: delDisappearMain 1s 1 !important;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+body [data-disappear='Donedisappear']::before {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  width: 0%;
+  height: 140%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  content: '';
+  background-color: #5881EA;
+  z-index: 2;
+  -webkit-animation: doneDisappear 2s 1;
+          animation: doneDisappear 2s 1;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes delDisappear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes delDisappear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@-webkit-keyframes doneDisappear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes doneDisappear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
 /*# sourceMappingURL=App.css.map */

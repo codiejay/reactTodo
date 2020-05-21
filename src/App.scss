@@ -14,5 +14,72 @@
 
 body { 
   background-color: $baseColor;
+    .App { 
 
+        #tasksList { 
+          width: 60%;
+          margin: 4em auto 0 auto;
+            h1 { 
+              font-size: 2em;
+              color: white;
+              font-family: $mainFont;
+              margin-bottom: 0.82em;
+            }
+        }
+    }
+
+    [data-disappear= 'Deldisappear'] { 
+      position: relative;
+      animation: delDisappearMain 1s 1 !important;
+      transition: all 2s;
+        &::before { 
+          transition: all 2s;
+          width: 0%;
+          height: 140%; 
+          position: absolute;
+          top: -20%;
+          left: 0;
+          content: '';
+          background-color: #FE8368;
+          z-index: 2;
+          animation: delDisappear 2s 1 ;
+          border-radius: 5px;
+        }
+    }
+    [data-disappear= 'Donedisappear'] { 
+      position: relative;
+      animation: delDisappearMain 1s 1 !important;
+      transition: all 2s;
+        &::before { 
+          transition: all 2s;
+          width: 0%;
+          height: 140%; 
+          position: absolute;
+          top: -20%;
+          left: 0;
+          content: '';
+          background-color: #5881EA;
+          z-index: 2;
+          animation: doneDisappear 2s 1 ;
+          border-radius: 5px;
+        }
+    }
+    
+}
+@keyframes delDisappear { 
+  from { 
+    width: 0;
+  }
+  to { 
+    width: 85%;
+  }
+}
+
+@keyframes doneDisappear { 
+  from { 
+    width: 0;
+  }
+  to { 
+    width: 75%;
+  }
 }
